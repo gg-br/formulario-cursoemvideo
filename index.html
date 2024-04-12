@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+
+
+        
+        <fieldset>
+            <legend>Crie sua conta</legend>
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="3" maxlength="15" size="15" placeholder="Nome de usuário" autocomplete="username">
+        </p>
+
+        <p>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" required minlength="3" size="15" placeholder="Sua senha" autocomplete="current-password">
+        </p>
+
+        <p>
+            <label for="isenha">Confirme sua senha:</label>
+            <input type="password" name="senha" id="isenha" required minlength="3" size="15" placeholder="Sua senha" autocomplete="current-password">
+        </p>
+
+        <p>
+            <label for="ifoto">Sua foto de Perfil:</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+        <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required minlength="1" maxlength="50" size="30" placeholder="Seu primeiro nome" autocomplete="username">
+            </p>
+
+            <p>
+                <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" required minlength="1" maxlength="50" size="25" placeholder="Seu sobrenome" autocomplete="username">
+            </p>
+
+            <p>
+                <label for="idia">Data de nascimento:</label>
+                <input type="date" name="date" id="idate">
+            </p>
+
+            <p>
+                <label for="iprof">Profição:</label>
+                <input type="text" name="prof" id="iprof" list="listaprof">
+
+                <datalist id="listaprof">
+                    <option value="1">Leiteiro</option>
+                    <option value="2">Carteiro</option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" required minlength="3" maxlength="50" size="30" placeholder="Seu e-mail" autocomplete="email">
+            </p>
+        
+            <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^[0-9]{3}-[0-9]{4,5}-[0-9]{4,5}$" placeholder="DDD-xxxxx-xxxx" size="28">
+            </p>
+
+            <p>
+                <label for="icor">Sua cor favorita:</label>
+                <input type="color" name="cor" id="icor" value="#0000ff">
+            </p>
+
+            <p>
+                <p>Sexo:</p>
+                <input type="radio" name="sexo" id="isexom"><label for="isexom">Masculino</label>
+                <input type="radio" name="sexo" id="isexof"><label for="isexof">Feminino</label>
+            </p>
+
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações da prova</legend>
+           
+            <p>
+                <label for="iest">Estado da prova:</label>
+                <select name="estado" id="iest">
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="idia">Data da prova:</label>
+                <input type="date" name="date" id="idate">
+            </p>
+
+            <p>
+                <label for="ihora">Hora da prova:</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+
+           
+            <p>
+                <label for="inota">Nota da prova:</label>
+                <input type="number" name="nota" id="inota" required minlength="0" maxlength="10" size="15" placeholder="Sua nota" step="0.1">
+            </p>
+
+            <p>
+                <label for="imes">Dia da inscrição:</label>
+                <input type="month" name="mes" id="imes" value="2024-04">
+            </p>
+          
+            <p>
+                <label for="iprof">Profição desejada:</label>
+                <input type="text" name="prof" id="iprof" list="listaprof">
+
+                <datalist id="listaprof">
+                    <option value="ADM">administrador</option>
+                </datalist>
+            </p>
+           
+        </fieldset>
+
+        <fieldset>
+            <legend>Matérias que você irá prestar</legend>
+            <input type="checkbox" name="mat" id="imat"> <label for="ifut">Matemática</label>
+            <input type="checkbox" name="pt" id="ipt"> <label for="ibasq">Português</label>
+            <input type="checkbox" name="fis" id="ifis"> <label for="ivolei">Física</label>
+            <input type="checkbox" name="qm" id="iqm"> <label for="ifut">Química</label> <br>
+            <input type="checkbox" name="edf" id="iedf"> <label for="ibasq">Educação Física</label>
+            <input type="checkbox" name="fil" id="ifil"> <label for="ivolei">Filosofia</label>
+            <input type="checkbox" name="sc" id="isc"> <label for="ifut">Sociologia</label>
+            <input type="checkbox" name="ing" id="iing"> <label for="ibasq">Inglês</label>
+           
+            <p>
+                <label for="inum">Número de matéria:</label>
+                <input type="range" name="num" id="inum" min="0"
+                max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <p>
+                <label for="imng">Deixe sua observação:</label><br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+
+       
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+
+    </form>
+</body>
+</html>
